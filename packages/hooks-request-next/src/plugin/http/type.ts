@@ -1,5 +1,6 @@
 import { BaseHttpRequest, LambdaParam, LambdaHTTPMethod } from '../../core/type'
-export interface HttpRequest extends BaseHttpRequest {
+
+export interface HttpRequest extends RequestInit, BaseHttpRequest {
   baseURL: string
 }
 

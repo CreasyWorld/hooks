@@ -8,14 +8,14 @@ import { BaseHttpRequest } from './type'
 export class BaseHttpRequestImpl implements BaseHttpRequest {
   timeout = 3000
 
-  credentials = 'same-origin'
+  credentials = 'same-origin' as RequestCredentials
 
   responseType = 'json'
 
   headers = {
     Accept: 'application/json',
     'Content-Type': 'application/json',
-  }
+  } as HeadersInit
 
   errorHandler(e: Error) {}
 

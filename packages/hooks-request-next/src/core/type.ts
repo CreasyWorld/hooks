@@ -18,22 +18,22 @@ export type LambdaParam = {
  */
 export interface BaseHttpRequest {
   // 超时时间
-  timeout: number
+  timeout?: number
 
   // cookie
-  credentials: string
+  credentials?: RequestCredentials
 
   // headers
-  headers: object
+  headers?: HeadersInit
 
   // response 可选参数: 'jsonp','json','text'
-  responseType: string
+  responseType?: string
 
   // 异常处理
-  errorHandler: (e: Error) => void
+  errorHandler?: (e: Error) => void
 
   // 取消请求的 AbortSignal 值
-  signal: string
+  signal?: AbortSignal | null
 }
 
 export interface BaseHttpResponse {
